@@ -22,3 +22,6 @@ Route::get('home', function () {
 Route::get('ideas', 'Ideas@index');
 
 Route::get('funding', 'Funding@index');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

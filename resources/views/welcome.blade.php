@@ -1,95 +1,129 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE HTML>
+<head>
+    <title>Find my FUNDS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
 
-        <title>Laravel</title>
+<header id="header" class="alt">
+    <div class="logo"><img src="../../images/FindMyFundslogo1.png" height="40" width="65"></div>
+    <a href="#menu">Menu</a>
+</header>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<nav id="menu">
+    <ul class="links">
+        <li><a href='{{ url('welcome') }}'>Home</a></li>
+        <li><a href='{{ url('ideas') }}'>Ideas</a></li>
+        <li><a href='{{ url('funding') }}'>Funding</a></li>
+    </ul>
+</nav>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1>Find my Funds</h1>
+            <p>Find my funds aims to allow start up companies
+                to find investors by posting their ideas in the website.</p>
+        </header>
+        <a href="#login" class="button big scrolly">Log In!</a>
+        <a href="#signup" class="button big scrolly">Sign Up!</a>
+    </div>
+</section>
 
-            .full-height {
-                height: 100vh;
-            }
+<div id="login">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+    <!-- Section -->
+    <section class="wrapper style2">
+        <div class="inner">
+            <!-- 2 Columns -->
+            <div class="flex flex-3">
+                <div class="col col1"></div>
+                <div class="col col2">
+                    <h3>Log In</h3>
+                    <p>Already a member? Log in now to post ideas or fund an idea.</p>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" required>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-info" value="Login">
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <div class="col col3"></div>
             </div>
         </div>
-    </body>
+    </section>
+</div>
+
+<div id="signup">
+    <!-- Section -->
+    <section class="wrapper style1">
+        <div class="inner">
+            <div class="flex flex-4">
+                <div class="col col1"></div>
+                <div class="col col2">
+                    <h3>Sign Up!</h3>
+                    <p>Create an account with us.</p>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" class="form-control" id="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cnfrmpwd">Confirm Password:</label>
+                            <input type="password" class="form-control" id="cnfrmpwdpwd" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col3">
+                    <br><br><br><br><br>
+                    <div class="form-group">
+                        <label for="accounttype">Account Type:</label>
+                            <select class="form-control" type="text" id="sel1" required>
+                                <option>Start Up company</option>
+                                <option>Funder</option>
+                            </select>
+                    </div>
+                    <br>
+                    <div class="col-lg-offset-1">
+                    <input type="submit" class="btn btn-info" value="Sign Up" style="float: right;">
+                    </div>
+                </div>
+                <div class="col col4"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="copyright">
+        <p>&copy; Find my Funds. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>

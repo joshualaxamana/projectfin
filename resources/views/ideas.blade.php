@@ -19,9 +19,10 @@
 <!-- Nav -->
 <nav id="menu">
     <ul class="links">
-        <li><a href='{{ url('/welcome') }}'>Home</a></li>
+        <li><a href='{{ url('/home') }}'>Home</a></li>
         <li><a href='{{ url('/ideas') }}'>Ideas</a></li>
         <li><a href='{{ url('/funding') }}'>Funding</a></li>
+        <li><a href='{{ url('/welcome') }}'>Sign Out</a></li>
     </ul>
 </nav>
 
@@ -31,12 +32,12 @@
     <!-- Section -->
     <section class="wrapper">
         <div class="inner">
-                <header class="align-center">
-                    <h1>IDEAS</h1>
-                    <p>Post an idea that needs funding.</p>
-                </header>
-                <form>
-                    <form action="form_handler.php" method="post">
+            <header class="align-center">
+                <h1>IDEAS</h1>
+                <p>Post an idea that needs funding.</p>
+            </header>
+            <form>
+                <form action="form_handler.php" method="post">
                     <div class="flex flex-3">
                         <div class="col col1"></div>
                         <div class="col col2">
@@ -51,7 +52,7 @@
                         <div class="col col3"></div>
                     </div>
                 </form>
-            </div>
+        </div>
     </section>
 </div>
 

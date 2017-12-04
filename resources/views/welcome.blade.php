@@ -9,16 +9,8 @@
 
 <header id="header" class="alt">
     <div class="logo"><img src="../../images/FindMyFundslogo1.png" height="40" width="65"></div>
-    <a href="#menu">Menu</a>
 </header>
 
-<nav id="menu">
-    <ul class="links">
-        <li><a href='{{ url('welcome') }}'>Home</a></li>
-        <li><a href='{{ url('ideas') }}'>Ideas</button></li>
-        <li><a href='{{ url('funding') }}'>Funding</a></li>
-    </ul>
-</nav>
 
 <section id="banner">
     <div class="inner">
@@ -94,14 +86,14 @@
                     <br><br><br><br><br>
                     <div class="form-group">
                         <label for="accounttype">Account Type:</label>
-                            <select class="form-control" type="text" id="sel1" required>
-                                <option>Start Up company</option>
-                                <option>Funder</option>
-                            </select>
+                        <select class="form-control" type="text" id="sel1" required>
+                            <option>Start Up company</option>
+                            <option>Funder</option>
+                        </select>
                     </div>
                     <br>
                     <div class="col-lg-offset-1">
-                    <input type="submit" class="btn btn-info" value="Sign Up" style="float: right;">
+                        <input type="submit" class="btn btn-info" value="Sign Up" style="float: right;">
                     </div>
                 </div>
                 <div class="col col4"></div>

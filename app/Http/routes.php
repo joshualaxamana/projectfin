@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('welcome', function () {
-    return view('welcome');
+Route::get('home', function () {
+    return view('home');
 });
 Route::get('ideas', 'Ideas@index');
 

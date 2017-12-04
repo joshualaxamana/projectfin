@@ -12,6 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('ideas');
+    return view('welcome');
 });
 
+
+Route::get('welcome', function () {
+    return view('welcome');
+});
+Route::get('ideas', 'Ideas@index');
+
+Route::get('funding', 'Funding@index');

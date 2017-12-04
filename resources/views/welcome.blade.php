@@ -15,7 +15,7 @@
 <nav id="menu">
     <ul class="links">
         <li><a href='{{ url('welcome') }}'>Home</a></li>
-        <li><a href='{{ url('ideas') }}'>Ideas</a></li>
+        <li><a href='{{ url('ideas') }}'>Ideas</button></li>
         <li><a href='{{ url('funding') }}'>Funding</a></li>
     </ul>
 </nav>
